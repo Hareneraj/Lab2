@@ -8,12 +8,10 @@ def main():
     Average = calc_average_temp(float_list)
     print("Average is" +str(Average))
     Minimum, Maximum = calc_min_and_max_temp(int_list)
-    print("Minimum is" +str(Minimum))
-    print("Maximum is" +str(Maximum))
+    result_list = max_min_result(Maximum, Minimum)
+    print("Maximum and Minimum are" +str(result_list))
+
     
-
-
-
 def display_main_menu():
     print("enter commands separately by a comma eg. 5,67,32")
     
@@ -39,6 +37,10 @@ def calc_min_and_max_temp(int_list):
     Minimum = min(int_list)
     Maximum = max(int_list)
     return Minimum, Maximum
+
+def max_min_result(Maximum, Minimum):
+    result_list = [Maximum, Minimum]
+    return result_list
     
     
     
