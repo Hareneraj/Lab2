@@ -1,3 +1,4 @@
+import statistics
 def main():
     print("ET0735 (DevOps FOR AIoT) - Lab 2 - Introduction to Python")
     display_main_menu()
@@ -10,6 +11,9 @@ def main():
     Minimum, Maximum = calc_min_and_max_temp(int_list)
     result_list = max_min_result(Maximum, Minimum)
     print("Maximum and Minimum are" +str(result_list))
+    Median = calc_median_temperature(float_list)
+    print("Median value:" +str(Median))
+    
 
     
 def display_main_menu():
@@ -41,6 +45,11 @@ def calc_min_and_max_temp(int_list):
 def max_min_result(Maximum, Minimum):
     result_list = [Maximum, Minimum]
     return result_list
+
+def calc_median_temperature(float_list):
+    median_value = statistics.median(float_list)
+    return median_value
+    
     
     
     
